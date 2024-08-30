@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--Page Title & icon-->
+    <title>Root: The Game of Woodland Might and Right</title>         
+    <link rel="icon" href="https://root.seiyria.com/assets/inicon/faction-woodland.png" type="image/png">   
+    <style>
+
+ 	/*Space for the text */
+        .text-box {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+ 	/*Styling the background*/
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://i.pinimg.com/originals/31/62/19/316219a02d33f2e593d585b1bbdba79b.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+ 	/*Styling the header, where the title goes*/
+        header {
+            background-color: #003822;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+ 	/*The sidebar on the side of each page, this is for its sizing, positioning, etc.*/
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 150px;
+            background-color: #333;
+            color: white;
+            height: 100%;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+ 	/*This is the text within the sidebar*/
+        .sidebar a {
+            display: block;
+            padding: 31px 0;
+font-family: 'Dancing Script';
+            text-decoration: none;
+            color: white;
+        }
+
+ 	/*Animation for hovering over the buttons in the sidebar*/
+.sidebar a:hover {
+  background-color: #8dfc91;
+            color: black;
+}
+
+ 	/*Text will be red if link is 'active' (You're on that page)*/
+        .menu-link.active {
+            color: red;
+        }
+
+ 	/*Where the main information is stored*/
+        .content {
+            margin-left: 150px;
+	    font-size: 18px;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar content  -->
+<div class="sidebar">
+    <a href="root_home.html" class="menu-link active">HOME</a>
+    <a href="root_factions.html" class="menu-link">FACTIONS</a>
+    <a href="root_advset.html" class="menu-link">ADVANCED SETUP</a>
+    <a href="root_score.html" class="menu-link">SCORESHEET</a>
+    <a href="root_tips.html" class="menu-link">TIPS & TRICKS</a>
+    <a href="root_about.html" class="menu-link">ABOUT</a>
+    <br/> <br/> <br/> <br/> <br/> <br/> 
+    <a href="root_login.html" class="menu-link">LOGIN</a>
+</div>
+
+    <!-- Page content -->
+    <div class="content">
+        <header>
+            <h1>Welcome To Root Setup</h1>
+        </header>
+        <!-- Another box for all the text& information -->
+        <div class="text-box">
+                <h3>What is Root?</h3>
+            <p>
+Root is an assymmetric warfare and area control board game taking place in the woodlands with up to 4 players, featuring what seems to be adorably hand-drawn woodland creatures, but in truth they are imbued with violent tendencies. There are 10 unique factions to choose from, and each player is in control of a different class, or faction on the board. These factions all vary in playstyle and strategies, so choose the one that bets fits you. There are plenty of expansions that add a such a wide variety of new features, rulesets, gamemodes, and so much more. Root's gameplay is as captivating as its artwork. It offers a delicate balance of strategy, negotiation, and adaptability. The constantly evolving dynamics on the board make every playthrough a unique experience. From forming alliances to launching daring raids, each decision you make will have consequences.<br><br> <p/>
+<h3>About This Website</h3>
+<p>This website is a fan-made tribute to the game, dedicated to providing information to help you navigate the whimsical yet strategic world of Root. It provides features such as a draft system, a score taly, system, information on each faction, tips & tricks, and more. A website for all levels of players."
+
+ 	<!--All the images-->
+</p>
+
+        </div>
+ <img src="https://i.pinimg.com/originals/e4/dd/c4/e4ddc41b4f25bffa578fd7ea8037796a.jpg" width = "1346px"height = "700px">  
+ <img src="https://images.squarespace-cdn.com/content/v1/5029c68d84ae261e07fb86ec/1568818827500-8JEWYOXKMVBLQECMDRWQ/bird+ambush+copy.jpg" width = "1346px"height = "1200px">  
+ <img src="https://images.squarespace-cdn.com/content/v1/5029c68d84ae261e07fb86ec/1568818854199-VARJWZOYQLGMQCWWLMAS/COFFIN+MAKERS+copy.jpg"width = "1346px"height = "1200px">  
+ <img src="https://images.squarespace-cdn.com/content/v1/5029c68d84ae261e07fb86ec/1568818869443-W82620BPEZLRZERBCSML/CORVID+PLANNERS+copy.jpg" width = "1346px"height = "1200px">  
+ <img src="https://d1w82usnq70pt2.cloudfront.net/wp-content/uploads/2022/07/LEAGUEOFADVENTUROUSMICEcopy.jpg" width = "1346px"height = "1200px">  
+ <img src="https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559025557559-D4d7h80UcAACH2O.jpg" width = "1346px"height = "1400px">  
+
+  </div>
+
+    <script>
+        // JavaScript code to highlight the active link in the sidebar
+        const menuLinks = document.querySelectorAll('.menu-link');
+        const currentPageUrl = window.location.href;
+
+        menuLinks.forEach(link => {
+            if (currentPageUrl === link.href) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoresheet - Root Setup</title>
+    <link rel="icon" href="https://root.seiyria.com/assets/inicon/faction-woodland.png" type="image/png">
+    <style>
+        .text-box {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://i.pinimg.com/originals/31/62/19/316219a02d33f2e593d585b1bbdba79b.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #003822;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 150px;
+            background-color: #333;
+            color: white;
+            height: 100%;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 31px 0;
+font-family: 'Dancing Script';
+            text-decoration: none;
+            color: white;
+        }
+
+.sidebar a:hover {
+  background-color: #8dfc91;
+            color: black;
+}
+
+        .menu-link.active {
+            color: red; 
+        }
+
+        .container {
+            margin-left: 150px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .content {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .scoresheet {
+            margin-bottom: 20px;
+            border:1px solid black;
+            padding: 10px;
+        }
+
+        .scoresheet h3 {
+            margin-top: 0;
+        }
+
+        .scoresheet table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+	 	/*Beginning to create the scoresheet, which is just a table with some editable cells*/
+        .scoresheet table th,
+
+        .scoresheet table td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+
+ 	/*The boxes that are not interactable will look different*/
+        .label.not-interactable {
+            pointer-events: none;
+            background-color: #eee;
+	    font-family: Mooli;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class= "sidebar">
+        <a href="root_home.html" class="menu-link">HOME</a>
+        <a href="root_factions.html" class="menu-link">FACTIONS</a>
+        <a href="root_advset.html" class="menu-link">ADVANCED SETUP</a>
+	<a href="root_score.html" class="menu-link active">SCORESHEET</a>
+        <a href="root_tips.html" class="menu-link">TIPS & TRICKS</a>
+  	<a href="root_about.html" class="menu-link">ABOUT</a>
+      	<br/>   <br/>   <br/>   <br/>   <br/>   <br/>
+        <a href="root_login.html" class="menu-link">LOGIN</a>
+
+    </div>
+
+    <!-- Main Stuff -->
+    <div class="container">
+        <header>
+            <h1>Root: The Game of Woodland Might and Right</h1>
+            <h2>Scoresheet</h2>
+        </header>
+
+        <div class="content">
+            <div class="text-box">
+                <h3>Tally Your Score</h3>
+ 
+ 	<!--Code to send info to generate a new scoresheet when the button is clicked-->
+ 	
+                <button class="generate-button" onclick="generateScoresheet()">Generate New Scoresheet</button>
+
+                <!-- Container for the generated scoresheets -->
+                <div id="scoresheet-container"></div>
+            </div>
+        </div>
+    </div>
+
+ 	<!--Javascript code that allos you to create your own scoresheets, as well as delete them through button listeners-->
+    <script>
+
+        let scoresheetCount = 0;
+
+        function generateScoresheet() {
+            scoresheetCount++;
+            const scoresheetContainer = document.getElementById("scoresheet-container");
+
+            const newScoresheetDiv = document.createElement("div");
+            newScoresheetDiv.classList.add("scoresheet");
+            newScoresheetDiv.innerHTML = `
+                <h3>Game ${scoresheetCount}</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <td class="label not-interactable"></td>
+                            <td class="label not-interactable">Player1</td>
+                            <td class="label not-interactable">Player 2</td>
+                            <td class="label not-interactable">Player 3</td>
+                            <td class="label not-interactable">Player 4</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="label not-interactable">NAME</td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                        </tr>
+                        <tr>
+                            <td class="label not-interactable">FACTION</td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                        </tr>
+                        <tr>
+                            <td class="label not-interactable">SCORE</td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="delete-button" onclick="deleteScoresheet(this)">🗑️</button>
+            `;
+
+            scoresheetContainer.appendChild(newScoresheetDiv);
+        }
+
+ 	<!--Function to delete the scoresheet-->
+
+        function deleteScoresheet(button) {
+            const scoresheetContainer = document.getElementById("scoresheet-container");
+            const scoresheet = button.parentElement;
+            scoresheetContainer.removeChild(scoresheet);
+        }
+    </script>
+</body>
+</html>

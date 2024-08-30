@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factions - Root Setup</title>
+    <link rel="icon" href="https://root.seiyria.com/assets/inicon/faction-woodland.png" type="image/png">
+    <style>
+ 	/*Space for the text*/
+        .text-box {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+ 	/*Styling the background*/
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://i.pinimg.com/originals/31/62/19/316219a02d33f2e593d585b1bbdba79b.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+
+ 	/*Styling the header*/
+        header {
+            background-color: #003822;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+ 	/*Sidebar proportions etc.*/
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 150px;
+            background-color: #333;
+            color: white;
+            height: 100%;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+ 	/*Sidebar Style*/
+        .sidebar a {
+            display: block;
+            padding: 31px 0;
+font-family: 'Dancing Script';
+            text-decoration: none;
+            color: white;
+        }
+
+ 	/*Button hover animation*/
+.sidebar a:hover {
+  background-color: #8dfc91; 
+            color: black;
+}
+
+        /* Active link in the sidebar */
+        .menu-link.active {
+            color: red; 
+        }
+
+ 	/*Container to split the information*/
+        .container {
+            margin-left: 150px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+ 	/*The seperate factions boxes*/
+        .faction {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+        }
+
+ 	/*Make all icon sizes the same*/
+        .faction img {
+            max-width: 100px;
+        }
+
+ 	/*Expandable button color to learn more (One for each faction)*/
+        .marquise .learn-more {
+            color: #F28C28;
+        }
+
+        .eyrie .learn-more {
+            color: blue;
+        }
+
+        .alliance .learn-more {
+            color: green;
+        }
+
+        .vagabond .learn-more {
+            color: grey;
+        }
+
+        .cult .learn-more {
+            color: #FDDA0D;
+        }
+
+        .riverfolk .learn-more {
+            color: teal;
+        }
+
+        .conspiracy .learn-more {
+            color: purple;
+        }
+
+        .duchy .learn-more {
+            color: #FFDEAD;
+        }
+
+        .hundreds .learn-more {
+            color: red;
+        }
+
+        .keepers .learn-more {
+            color: silver;
+        }
+
+        .learn-more {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .about {
+            display: none;
+        }
+
+        .about.show {
+            display: block;
+        }
+
+        .faction-paragraph {
+            font-family: "Calisto MT", serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar content -->
+    <div class="sidebar">
+        <a href="root_home.html" class="menu-link">HOME</a>
+        <a href="root_factions.html" class="menu-link active">FACTIONS</a>
+        <a href="root_advset.html" class="menu-link">ADVANCED SETUP</a>
+	<a href="root_score.html" class="menu-link">SCORESHEET</a>
+        <a href="root_tips.html" class="menu-link">TIPS & TRICKS</a>
+  	<a href="root_about.html" class="menu-link">ABOUT</a>
+      	<br/>   <br/>   <br/>   <br/>   <br/>   <br/>
+        <a href="root_login.html" class="menu-link">LOGIN</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <header>
+            <h1>Root: The Game of Woodland Might and Right</h1>
+            <h2>The Factions</h2>
+        </header>
+
+        <!-- Factions content -->
+        <div class="faction marquise">
+            <h3>Marquise De Cat</h3>
+            <img src="https://static.wikia.nocookie.net/root/images/4/45/Marquise_de_Cat_-_Symbol.png/revision/latest?cb=20220716140039" alt="Marquise de Cat">
+            <p class="faction-paragraph">"As the Marquise de Cat, you want to turn the Woodland into an industrial and military powerhouse. Each time you place a building on the map, you score points. The more of that building type there is on the map, the more points your score."<br/><br/>Without a doubt, the Marquise is very good for learning fundamentals. Since they feel limited, especially compared to the likes of the Eyrie Dynasties for example, the Cats are what I would consider an 'efficiency puzzle', where optimization is key, difficult to master but still relatively powerful.</p>
+            <p class="learn-more">Learn More</p>
+            <p class="about">Type: Militant<br/>Complexity: Low<br/>Aggression: Moderate
+</p>
+        </div>
+        <div class="faction eyrie">
+            <h3>Eyrie Dynasties</h3>
+            <img src="https://static.wikia.nocookie.net/root/images/8/89/Eyrie_Dynasties_-_Symbol.png/revision/latest?cb=20220716144041" alt="Eyrie Dynasties">
+            <p class="faction-paragraph">"As the Eyrie Dynasties, you wish to restore your once-dignified kind to your former glory by retaking control of the Woodland. Each turn, you score points for your roosts on the map. The more roosts, the more points you score."<br/><br/>The Eyrie Dynasties are a very enjoyable and popular faction, and for a reason. They are an ever-growing engine that follows a strict order to complete your actions. They are high risk, high reward that manages to score many victory points very quickly.</p>
+            <p class="learn-more">Learn More</p>
+            <p class="about">Type: Militant<br/>Complexity: Low<br/>Aggression: High
+</p>
+        </div>
+        <div class="faction alliance">
+            <h3>Woodland Alliance</h3>
+            <img src="https://static.wikia.nocookie.net/root/images/8/8c/Woodland_Alliance_-_Symbol.png/revision/latest?cb=20220716190833" alt="Woodland Alliance">
+            <p class="faction-paragraph">"As the Woodland Alliance, you work to grain the sympathy of the oppressed forest creatures. Each time you place a sympathy token on the map, you score points. The more sympathy tokens on the map, the more points your score."<br/><br/>The Woodland Alliance is the remains of the non-pledged woodland creatures who work to gain the sympathy of the various creatures of the Woodland who are dissatisfied with militant groups that are taking over. They are good at setting traps, policing, and breaking off paths for the other factions and is an overall nuissance that has a high point scoring engine. </p>
+            <p class="learn-more">Learn More</p>
+            <p class="about">Type: Insurgent<br/>Complexity: High<br/>Aggression: Moderate
+</p>
+        </div>
+        <div class="faction vagabond">
+            <h3>Vagabond</h3>
+            <img src="https://static.wikia.nocookie.net/root/images/5/5d/Vagabond_-_Symbol.png/revision/latest?cb=20230615155636" alt="Vagabond">
+            <p class="faction-paragraph">"As the Vagabond, you will play all sides of the conflict, making friends and foes as it suits you. You score points through your relationships, as you aid friendly factions by giving them cards, and as you grow your infamy with hostile factions by removing their pieces in battle. You'll also score points as you go on quests to spread your good name amongst the creatures of the Woodland."<br/><br/>The Vagabond has to manage his items efficiently to perform optimal movements to ensure his victory. They are probably the most unconventional faction, who player extremely differently from the other factions. Yet, they are still very powerful.</p>
+            <p class="learn-more">Learn More</p>
+            <p class="about">Type: Insurgent<br/>Complexity: Moderate<br/>Aggression: Moderate
+</p>
+        </div>
+        <div class="faction cult">
+            <h3>Lizard Cult</h3>
+            <img src="https://static.wikia.nocookie.net/root/images/2/28/Lizard_Cult_-_Symbol.png/revision/latest?cb=20220716193546" alt="Lizard Cult">
+            <p class="faction-paragraph">"As the Lizard Cult, you cater to those creatures who have been discarded by the other factions. You score victory points by performing the proper rituals, revealing cards from your hand matching clearings where you have gardens, and discarding cards to complete the rite. The more gardens you have in clearings matching the revealed card, the more points you score."<br/><br/>The Lizard Cult overwhelms its opponents by spreading its gospel to turn enemy buildings and token, as well as warriors, into their own, effectively creating a convering culture. They are far less flexible than the other factions, and they are difficult so the cult is for true masters of the Woodland. </p>
+            <p class="learn-more">Learn More</p>
+            <p class="about">Type: Insurgent<br/>Complexity: High<br/>Aggression: Moderate
+</p>
+        </div>
+        <div class="faction riverfolk">
+            <h3>Riverfolk Company</h3>
+            <img src="https://static.wikia.nocookie.net/root/images/b/ba/Riverfolk_Company_-_Symbol.png/revision/latest?cb=20230615160134" alt="Riverfolk Company">
+            <p class="faction-paragraph">"As the Riverfolk Company, you ply the rivers winding through the great Woodland, offering your services to any faction who can pay. You score victory points by establishing tade posts throughout the clearings. The more trade posts in clearings of the same suit, the more points you score."<br/><br/>The Riverfolk Company has their hand showing at all times, able to pitch sales to the other players by selling their cards as well as aditional in-game services. The price for these services are the pieces needed to greatly enhance the optimization of their actions. The Riverfolk Company are a great factions for those who find appeal in mental manipulation, and have a knack for sales pitching...</p>
+            <p class="learn-more">Learn More</p>
+            <p class="about">Type: Insurgent<br/>Complexity: High<br/><br/>Aggression: Low
+</p>
+        </div>
+        <div class="faction conspiracy">
+            <h3>Corvid Conspiracy</h3>
+            <img src="https://static.wikia.nocookie.net/root/images/2/24/Corvid_Conspiracy_-_Symbol.png/revision/latest?cb=20230615160238" alt="Corvid Conspiracy">
+            <p class="faction-paragraph">"As the Corvid Conspiracy, you want to show that you are the true power behind the scenes, controlling the tides of the Woodland war. Each time you flip a plot token you've placed on the map, you score points. The more face-up plots on the map when you do, the more points you score."<br/><br/>The Corvid Conspiracy are a very tricky faction, they are designed around sabotaging and fooling the other players. They are a behind the scenes force of crows that seek to sow the seeds of chaos and utter mindgames on to the board.</p>
+            <p class="learn-more">Learn More</p>
+            <p class="about">Type: Insurgent<br/>Complexity: Low<br/>Aggression: Moderate
+</p>
+        </div>
+        <div class="faction duchy">
+            <h3>Underground Duchy</h3>
+            <img src="https://static.wikia.nocookie.net/root/images/c/c3/Underground_Duchy_-_Symbol.png/revision/latest?cb=20230615160219" alt="Underground Duchy">
+            <p class="faction-paragraph">"As the Underground Duchy, you want to show the foreign creatures of the Woodland that they would be better off as subjects. Each time you sway one of your ministers to the cause of pacifying and unifying the land above, you score points. The higher the rank of the minister you sway the more points you score."<br/><br/>The Underground Duchy are a kingdom of moles living in the underworld, and in order to bring peace and union to the tragedies of the war taking place above the ground, mole ministers are swayed to lead the invasion of the overworld.</p>
+            <p class="learn-more">Learn More</p>
+            <p class="about">Type: Militant<br/>Complexity: Moderate<br/>Aggression: Moderate
+</p>
+        </div>
+        <div class="faction hundreds">
+            <h3>Lord of the Hundreds</h3>
+            <img src="https://ledergames.com/cdn/shop/files/RootME_LordHundreds.png?v=1647533322&width=1080" alt="Lord of the Hundreds">
+            <p class="faction-paragraph">"As the Lord of the Hundreds, you score points as you oppress your foes. At the end of your turn, the more clearings you rule that have no enemy pieces-no warriors, no buildings, nothing-the more points you score."<br/><br/>The Lord of the Hundreds has one of, if not the highest aggression level out of any faction. Good for players wanting to overrule the board with an overwhelming force of rats controlled by one very moody warloard rat. Moving in large groups, these woodland warriors spread mobs to destroy buildings and, spread chaos to the board at hand.</p>
+            <p class="learn-more">Learn More</p>
+            <p class="about">Type: Militant<br/>Complexity: Moderate<br/>Aggression: High
+</p>
+        </div>
+        <div class="faction keepers">
+            <h3>Keepers in Iron</h3>
+            <img src="https://ledergames.com/cdn/shop/files/RootME_KeepersIron.png?v=1647533322" alt="Keepers in Iron">
+            <p class="faction-paragraph">"As the Keepers in Iron, you score points by recovering relics lost in past conflicts. You will need to delve relics out of the forests, move them to a waystation of the same type, and then recover them. Whether these relics belong to you or the Woodland, though, is another question."<br/><br/>The Keepers in Iron are a relatively smaller group of devout exiled knights, and they are claimed to be the most difficult faction, yet they are also often claimed to be the most effective faction. Suited for players that are interested in dedicating time to master this class for an incredibly high risk, high reward, and high enjoyment faction. </p>
+            <p class="learn-more">Learn More</p>
+            <p class="about">Type: Militant<br/>Complexity: High<br/>Aggression: Moderate
+</p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to for the about text
+        const learnMoreButtons = document.querySelectorAll('.learn-more');
+        const aboutSections = document.querySelectorAll('.about');
+
+        learnMoreButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                aboutSections[index].classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>
